@@ -1,64 +1,61 @@
-# 🚆 Indonesia Overfreight Community — Official Website
+# 🚆 Indonesia Overfreight Community (IOC) — Website Resmi
 
-Welcome to the official website repository of **Indonesia Overfreight Community (IOC)**, the Indonesian community for the Roblox game [Overfreight](https://www.roblox.com/games/overfreight).
-
----
-
-## 📌 About IOC
-
-**Indonesia Overfreight Community (IOC)** is a community built for Indonesian players of the Roblox game Overfreight — a freight train simulation game. We bring together players who share a passion for railway simulation, Indonesian rail culture (KAI), and collaborative gameplay.
+Selamat datang di repositori website resmi **Indonesia Overfreight Community (IOC)**.
 
 ---
 
-## 🌐 About This Website
+## 📌 Tentang IOC
 
-This is the official website for IOC, built with:
+**Indonesia Overfreight Community (IOC)** adalah sebuah komunitas fanbase kecil dari game Roblox **Overfreight** yang berbasis di Indonesia. IOC bukan merupakan komunitas resmi yang dimiliki atau dikelola oleh pihak pengembang Overfreight, melainkan murni sebuah komunitas penggemar yang dibentuk oleh dan untuk pemain Indonesia.
 
-- **Pure HTML, CSS, JavaScript** — no frameworks, fully GitHub Pages compatible
-- **Inter** font for clean, modern typography
-- **iOS 26 Liquid Glass** design language — translucent, fluid, and modern
-- **Black & White** color palette with glass effects
-- `config.json` as single source of truth for site configuration
+IOC lahir pada **11 Juni 2026** dan saat ini beroperasi melalui platform berikut:
+
+- 💬 **WhatsApp Group** — Grup utama diskusi komunitas
+- 📢 **WhatsApp Channel** — Saluran pengumuman resmi IOC
+- 🔵 **Discord** — *Coming soon*
 
 ---
 
-## 📁 Project Structure
+## 🌐 Tentang Website Ini
+
+Website ini merupakan halaman resmi IOC yang dibangun menggunakan:
+
+- **HTML, CSS, JavaScript** murni — kompatibel dengan GitHub Pages
+- Tipografi **Inter** untuk tampilan yang bersih dan modern
+- Bahasa desain **iOS 26 Liquid Glass** — transparan, dinamis, dan modern
+- Palet warna **Hitam & Putih**
+- `config.json` sebagai sumber konfigurasi utama
+
+---
+
+## 📁 Struktur Proyek
 
 ```
 ioc-website/
-├── index.html        # Landing / home page
-├── style.css         # Global stylesheet
-├── app.js            # Main JavaScript logic
-├── config.json       # Site configuration (single source of truth)
-├── README.md         # This file
-└── license.txt       # License & usage terms
+├── index.html        # Halaman utama
+├── style.css         # Lembar gaya global
+├── app.js            # Logika JavaScript utama
+├── config.json       # Konfigurasi situs
+├── README.md         # Berkas ini
+└── license.txt       # Ketentuan lisensi
 ```
 
 ---
 
-## 🚫 License
+## 🚫 Lisensi
 
-All source code, assets, and content in this repository are protected under the **IOC Proprietary License**.  
-See [`license.txt`](./license.txt) for full terms.
+Seluruh kode sumber, aset, dan konten dalam repositori ini dilindungi oleh **Lisensi Proprietary IOC**.
+Lihat [`license.txt`](./license.txt) untuk ketentuan lengkap.
 
-**Copying, redistribution, or modification of this code is strictly prohibited.**
-
----
-
-## 💬 Community & Support
-
-Have feedback, found a bug, or want to contribute ideas?  
-Join our official Discord server and reach out to the IOC team there.
-
-> Discord link will be available on the website.
+**Penyalinan, pendistribusian ulang, atau modifikasi kode ini tanpa izin adalah tindakan yang dilarang.**
 
 ---
 
-## 👥 Credits
+## 👥 Kredit
 
-- **IOC Team** - Community, Website Manager
-- Built with ❤️ for the Indonesian Overfreight community
+- **Tim IOC** — Manajemen Komunitas, Website & Konten
+- Dibuat dengan ❤️ untuk komunitas Overfreight Indonesia
 
 ---
 
-*© 2026 Indonesia Overfreight Community. All rights reserved.*
+*© 2026 Indonesia Overfreight Community. Seluruh hak cipta dilindungi.*
