@@ -13,14 +13,7 @@
       "icon": "🚆",
       "name": "Overfreight Decal Indonesia (ODI)",
       "desc": "Galeri dan direktori decal ID KAI untuk game Roblox Overfreight. Temukan livery kereta Indonesia favoritmu.",
-      "url": "#",
-      "active": true
-    },
-    {
-      "icon": "🌐",
-      "name": "Website IOC",
-      "desc": "Halaman resmi Indonesia Overfreight Community. Informasi, tim, dan tautan resmi IOC.",
-      "url": "#",
+      "url": "https://ioc-official.github.io/Gudang-Decal-Overfreight/",
       "active": true
     }
   ],
