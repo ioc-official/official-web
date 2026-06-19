@@ -44,8 +44,8 @@
       platform: 'WhatsApp Group\nWhatsApp Channel\nDiscord (Coming Soon)'
     },
     links: [
-      { icon: '💬', name: 'WhatsApp Group', url: '#' },
-      { icon: '📢', name: 'WhatsApp Channel', url: '#' },
+      { icon: '💬', name: 'WhatsApp Group', url: 'https://chat.whatsapp.com/I31N95kFFWBFxR8RBSN093' },
+      { icon: '📢', name: 'WhatsApp Channel', url: 'https://whatsapp.com/channel/0029VbD38A1FSAsxPCXjB80k' },
       { icon: '🔵', name: 'Discord IOC', url: '#' }
     ]
   };
