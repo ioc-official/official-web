@@ -29,14 +29,14 @@
     ],
     team: [
       { name: 'Gerald Jonathan William', role: 'Owner', avatar: './assets/LogoIOC.png' },
-      { name: 'Irgan Arda Turan', role: 'Wakil', avatar: '' },
-      { name: '-', role: 'Security 1', avatar: '' },
-      { name: '-', role: 'Security 2', avatar: '' },
-      { name: '-', role: 'Admin 1', avatar: '' },
-      { name: '-', role: 'Admin 2', avatar: '' },
-      { name: '-', role: 'Admin 3', avatar: '' },
-      { name: '-', role: 'Admin 4', avatar: '' },
-      { name: '-', role: 'Admin 5', avatar: '' }
+      { name: 'Irgan Arda Turan', role: 'Wakil', avatar: './assets/WAKIL - ICON.png' },
+      { name: '-', role: 'Security 1', avatar: './assets/SECURITY - ICON.png' },
+      { name: '-', role: 'Security 2', avatar: './assets/SECURITY - ICON.png' },
+      { name: '-', role: 'Admin 1', avatar: './assets/ADMIN - ICON.png' },
+      { name: '-', role: 'Admin 2', avatar: './assets/ADMIN - ICON.png' },
+      { name: '-', role: 'Admin 3', avatar: './assets/ADMIN - ICON.png' },
+      { name: '-', role: 'Admin 4', avatar: './assets/ADMIN - ICON.png' },
+      { name: '-', role: 'Admin 5', avatar: './assets/ADMIN - ICON.png' }
     ],
     stats: {
       member: 0,
