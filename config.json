@@ -1,0 +1,48 @@
+{
+  "discord": "https://discord.gg/ioc",
+  "ads": [
+    {
+      "id": "ads-1",
+      "text": "Bergabunglah ke WhatsApp Group IOC sekarang!",
+      "url": "https://chat.whatsapp.com/I31N95kFFWBFxR8RBSN093",
+      "active": true
+    }
+  ],
+  "websites": [
+    {
+      "icon": "🚆",
+      "name": "Overfreight Decal Indonesia (ODI)",
+      "desc": "Galeri dan direktori decal ID KAI untuk game Roblox Overfreight. Temukan livery kereta Indonesia favoritmu.",
+      "url": "#",
+      "active": true
+    },
+    {
+      "icon": "🌐",
+      "name": "Website IOC",
+      "desc": "Halaman resmi Indonesia Overfreight Community. Informasi, tim, dan tautan resmi IOC.",
+      "url": "#",
+      "active": true
+    }
+  ],
+  "team": [
+    { "name": "Gerald Jonathan William", "role": "Owner", "avatar": "./assets/LogoIOC.png" },
+    { "name": "Irgan Arda Turan", "role": "Wakil", "avatar": "./assets/WAKIL - ICON.png" },
+    { "name": "-", "role": "Security 1", "avatar": "./assets/SECURITY - ICON.png" },
+    { "name": "-", "role": "Security 2", "avatar": "./assets/SECURITY - ICON.png" },
+    { "name": "-", "role": "Admin 1", "avatar": "./assets/ADMIN - ICON.png" },
+    { "name": "-", "role": "Admin 2", "avatar": "./assets/ADMIN - ICON.png" },
+    { "name": "-", "role": "Admin 3", "avatar": "./assets/ADMIN - ICON.png" },
+    { "name": "-", "role": "Admin 4", "avatar": "./assets/ADMIN - ICON.png" },
+    { "name": "-", "role": "Admin 5", "avatar": "./assets/ADMIN - ICON.png" }
+  ],
+  "stats": {
+    "member": 0,
+    "rating": "0.0",
+    "platform": "WhatsApp Group\nWhatsApp Channel\nDiscord (Coming Soon)"
+  },
+  "links": [
+    { "icon": "💬", "name": "WhatsApp Group", "url": "https://chat.whatsapp.com/I31N95kFFWBFxR8RBSN093" },
+    { "icon": "📢", "name": "WhatsApp Channel", "url": "https://whatsapp.com/channel/0029VbD38A1FSAsxPCXjB80k" },
+    { "icon": "🔵", "name": "Discord IOC", "url": "#" }
+  ]
+}
