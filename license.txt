@@ -1,0 +1,133 @@
+================================================================================
+        IOC PROPRIETARY LICENSE — INDONESIA OVERFREIGHT COMMUNITY
+================================================================================
+
+Effective Date   : June 19, 2026
+Licensor         : Indonesia Overfreight Community (IOC)
+Scope            : All source code, assets, design, and content contained
+                   within this repository and the official IOC website.
+
+================================================================================
+1. DEFINITIONS
+================================================================================
+
+"Repository"     refers to the official IOC website source code and all
+                 associated files hosted under the IOC GitHub organization.
+
+"User"           refers to any individual or entity who accesses, views,
+                 downloads, or interacts with the Repository in any form.
+
+"Content"        refers to all HTML, CSS, JavaScript, JSON, image assets,
+                 design elements, written text, and any other material
+                 contained within the Repository.
+
+================================================================================
+2. GRANT OF RIGHTS
+================================================================================
+
+NO rights are granted to any User to:
+
+  a) Copy, duplicate, or reproduce any portion of the Content, in whole
+     or in part, for any purpose — commercial or non-commercial.
+
+  b) Modify, adapt, translate, or create derivative works based on the
+     Content without prior written permission from IOC.
+
+  c) Redistribute, publish, sublicense, or share the Content, or any
+     portion thereof, through any medium or platform.
+
+  d) Use the IOC name, logo, branding, or any associated identity in
+     connection with unauthorized copies or derivatives of this work.
+
+  e) Claim ownership or authorship of any part of the Content.
+
+================================================================================
+3. PERMITTED USE
+================================================================================
+
+Users are permitted to:
+
+  a) VIEW the website and its public-facing content for personal,
+     non-commercial purposes.
+
+  b) Reference the website for informational or educational purposes,
+     provided that proper credit is given to IOC.
+
+  c) Submit feedback, bug reports, or criticism through official IOC
+     channels as described in Section 5.
+
+================================================================================
+4. INTELLECTUAL PROPERTY
+================================================================================
+
+All Content in this Repository remains the exclusive intellectual property
+of Indonesia Overfreight Community (IOC). This license does not transfer
+any ownership rights to any User.
+
+Any unauthorized use of the Content may result in action being taken at
+the discretion of the IOC team.
+
+================================================================================
+5. FEEDBACK, CRITICISM & REPORTING
+================================================================================
+
+IOC welcomes constructive feedback from the community. If you:
+
+  - Discover a security vulnerability or data leak
+  - Encounter bugs, broken features, or performance issues
+  - Have concerns about the website's content or conduct
+  - Wish to report any misuse or unauthorized copying of this work
+
+Please bring it to our attention through the OFFICIAL IOC DISCORD SERVER.
+Do NOT post sensitive security issues publicly. Contact IOC staff directly
+via Discord and allow a reasonable time for the team to respond.
+
+We value every report — your feedback helps us improve.
+
+================================================================================
+6. DISCLAIMER OF WARRANTIES
+================================================================================
+
+This website and its Content are provided "AS IS" without warranty of
+any kind, express or implied, including but not limited to warranties of
+merchantability, fitness for a particular purpose, or non-infringement.
+
+IOC does not guarantee that the website will be available at all times,
+free from errors, or that any reported issues will be resolved within
+a specific timeframe.
+
+================================================================================
+7. LIMITATION OF LIABILITY
+================================================================================
+
+To the fullest extent permitted by applicable law, IOC and its team
+members shall not be liable for any direct, indirect, incidental, special,
+or consequential damages arising from:
+
+  - Use or inability to use the website
+  - Unauthorized access to or alteration of Content
+  - Any third-party conduct or content linked from the website
+
+================================================================================
+8. MODIFICATIONS TO THIS LICENSE
+================================================================================
+
+IOC reserves the right to update or modify this license at any time.
+Changes will be effective upon posting the updated license to the
+Repository. Continued use of the website after such changes constitutes
+acceptance of the new terms.
+
+================================================================================
+9. GOVERNING TERMS
+================================================================================
+
+This license is governed by the internal policies of Indonesia Overfreight
+Community. For any questions regarding this license, please reach out via
+the official IOC Discord server.
+
+================================================================================
+
+© 2026 Indonesia Overfreight Community (IOC). All rights reserved.
+Effective since June 19, 2026. Unauthorized use is strictly prohibited.
+
+================================================================================
