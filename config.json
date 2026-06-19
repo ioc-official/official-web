@@ -29,8 +29,8 @@
     { "name": "-", "role": "Admin 5", "avatar": "./assets/ADMIN - ICON.png" }
   ],
   "stats": {
-    "member": 0,
-    "rating": "0.0",
+    "member": 10,
+    "rating": "4.0",
     "platform": "WhatsApp Group\nWhatsApp Channel\nDiscord (Coming Soon)"
   },
   "links": [
