@@ -1,6 +1,6 @@
 # 🚆 Indonesia Overfreight Community (IOC) — Website Resmi
 
-Selamat datang di repositori website resmi **Indonesia Overfreight Community (IOC)**.
+Selamat datang di website resmi **Indonesia Overfreight Community (IOC)**.
 
 ---
 
