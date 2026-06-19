@@ -11,6 +11,16 @@
 </head>
 <body>
 
+  <!-- ===================== ADS BANNER ===================== -->
+  <div class="ads-bar" id="ads-bar">
+    <div class="ads-bar-inner">
+      <span class="ads-label">Info</span>
+      <span class="ads-text" id="ads-text"></span>
+      <a class="ads-link" id="ads-link" href="#" target="_blank">Lihat →</a>
+    </div>
+    <button class="ads-close" id="ads-close" aria-label="Tutup">✕</button>
+  </div>
+
   <!-- ===================== BANNER ===================== -->
   <section class="banner" id="banner">
     <div class="banner-bg">
@@ -86,9 +96,7 @@
     <div class="container">
       <div class="section-label reveal">Proyek</div>
       <h2 class="section-title reveal">Website Buatan IOC</h2>
-      <div class="cards-grid" id="website-grid">
-        <!-- Diisi dari config.json via app.js -->
-      </div>
+      <div class="cards-grid" id="website-grid"></div>
     </div>
   </section>
 
@@ -97,9 +105,7 @@
     <div class="container">
       <div class="section-label reveal">Struktur</div>
       <h2 class="section-title reveal">IOC Team Member</h2>
-      <div class="team-grid" id="team-grid">
-        <!-- Diisi dari config.json via app.js -->
-      </div>
+      <div class="team-grid" id="team-grid"></div>
     </div>
   </section>
 
@@ -108,9 +114,7 @@
     <div class="container">
       <div class="section-label reveal">Data</div>
       <h2 class="section-title reveal">Statistik IOC</h2>
-      <div class="stats-grid" id="stats-grid">
-        <!-- Diisi dari config.json via app.js -->
-      </div>
+      <div class="stats-grid" id="stats-grid"></div>
     </div>
   </section>
 
@@ -119,9 +123,7 @@
     <div class="container">
       <div class="section-label reveal">Tautan</div>
       <h2 class="section-title reveal">Link IOC</h2>
-      <div class="links-grid" id="links-grid">
-        <!-- Diisi dari config.json via app.js -->
-      </div>
+      <div class="links-grid" id="links-grid"></div>
     </div>
   </section>
 
@@ -138,7 +140,7 @@
             <div class="contact-title">Discord IOC</div>
             <div class="contact-desc">Bergabung ke server Discord resmi IOC untuk diskusi, laporan, dan pengumuman komunitas.</div>
           </div>
-          <a class="contact-btn" id="discord-btn" href="#" target="_blank">Bergabung</a>
+          <a class="contact-btn" id="discord-btn" href="#" target="_blank" rel="noopener noreferrer">Bergabung</a>
         </div>
         <div class="glass-card contact-card contact-disabled reveal">
           <div class="contact-icon">🌐</div>
