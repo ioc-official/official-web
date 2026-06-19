@@ -1,73 +1,77 @@
 /* ============================================================
    IOC WEBSITE — app.js
-   Load config.json, render semua section, scroll reveal
+   Semua data murni dari config.json
    ============================================================ */
 
 (function () {
   'use strict';
 
   /* ============================================================
-     CONFIG — Default fallback jika config.json belum ada
-     ============================================================ */
-  var defaultConfig = {
-    discord: 'https://discord.gg/ioc',
-    websites: [
-      {
-        icon: '🚆',
-        name: 'Overfreight Decal Indonesia (ODI)',
-        desc: 'Galeri dan direktori decal ID KAI untuk game Roblox Overfreight. Temukan livery kereta Indonesia favoritmu.',
-        url: '#',
-        active: true
-      },
-      {
-        icon: '🌐',
-        name: 'Website IOC',
-        desc: 'Halaman resmi Indonesia Overfreight Community. Informasi, tim, dan tautan resmi IOC.',
-        url: '#',
-        active: true
-      }
-    ],
-    team: [
-      { name: 'Gerald Jonathan William', role: 'Owner', avatar: './assets/LogoIOC.png' },
-      { name: 'Irgan Arda Turan', role: 'Wakil', avatar: './assets/WAKIL - ICON.png' },
-      { name: '-', role: 'Security 1', avatar: './assets/SECURITY - ICON.png' },
-      { name: '-', role: 'Security 2', avatar: './assets/SECURITY - ICON.png' },
-      { name: '-', role: 'Admin 1', avatar: './assets/ADMIN - ICON.png' },
-      { name: '-', role: 'Admin 2', avatar: './assets/ADMIN - ICON.png' },
-      { name: '-', role: 'Admin 3', avatar: './assets/ADMIN - ICON.png' },
-      { name: '-', role: 'Admin 4', avatar: './assets/ADMIN - ICON.png' },
-      { name: '-', role: 'Admin 5', avatar: './assets/ADMIN - ICON.png' }
-    ],
-    stats: {
-      member: 0,
-      rating: '0.0',
-      platform: 'WhatsApp Group\nWhatsApp Channel\nDiscord (Coming Soon)'
-    },
-    links: [
-      { icon: '💬', name: 'WhatsApp Group', url: 'https://chat.whatsapp.com/I31N95kFFWBFxR8RBSN093' },
-      { icon: '📢', name: 'WhatsApp Channel', url: 'https://whatsapp.com/channel/0029VbD38A1FSAsxPCXjB80k' },
-      { icon: '🔵', name: 'Discord IOC', url: '#' }
-    ]
-  };
-
-  /* ============================================================
      HELPERS
      ============================================================ */
-  function el(id) {
-    return document.getElementById(id);
-  }
+  function el(id) { return document.getElementById(id); }
 
-  function make(tag, cls, html) {
+  function make(tag, cls) {
     var d = document.createElement(tag);
     if (cls) d.className = cls;
-    if (html !== undefined) d.innerHTML = html;
     return d;
   }
 
   function esc(str) {
-    var div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
+    var d = document.createElement('div');
+    d.appendChild(document.createTextNode(String(str)));
+    return d.innerHTML;
+  }
+
+  /* ============================================================
+     ADS SYSTEM
+     ============================================================ */
+  function initAds(ads) {
+    var bar = el('ads-bar');
+    var textEl = el('ads-text');
+    var linkEl = el('ads-link');
+    var closeBtn = el('ads-close');
+
+    if (!bar) return;
+
+    if (!ads || !ads.length) {
+      bar.classList.add('ads-hidden');
+      return;
+    }
+
+    var activeAd = null;
+    for (var i = 0; i < ads.length; i++) {
+      if (ads[i].active) { activeAd = ads[i]; break; }
+    }
+
+    if (!activeAd) {
+      bar.classList.add('ads-hidden');
+      return;
+    }
+
+    var closedKey = 'ioc_ads_closed_' + (activeAd.id || 'default');
+    try {
+      if (localStorage.getItem(closedKey) === '1') {
+        bar.classList.add('ads-hidden');
+        return;
+      }
+    } catch (e) {}
+
+    if (textEl) textEl.textContent = activeAd.text || '';
+    if (linkEl) {
+      linkEl.href = activeAd.url || '#';
+      linkEl.style.display = (activeAd.url && activeAd.url !== '#') ? '' : 'none';
+    }
+
+    document.body.classList.add('ads-active');
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        bar.classList.add('ads-hidden');
+        document.body.classList.remove('ads-active');
+        try { localStorage.setItem(closedKey, '1'); } catch (e) {}
+      });
+    }
   }
 
   /* ============================================================
@@ -83,10 +87,11 @@
       card.style.transitionDelay = (i * 80) + 'ms';
 
       var linkHtml = site.active
-        ? '<a class="project-link" href="' + esc(site.url) + '" target="_blank">Kunjungi →</a>'
+        ? '<a class="project-link" href="' + esc(site.url) + '" target="_blank" rel="noopener noreferrer">Kunjungi &rarr;</a>'
         : '<span class="project-link project-link-disabled">Coming Soon</span>';
 
       card.innerHTML =
+        '<div class="project-title-tag">Website IOC</div>' +
         '<div class="project-icon">' + esc(site.icon) + '</div>' +
         '<div class="project-name">' + esc(site.name) + '</div>' +
         '<div class="project-desc">' + esc(site.desc) + '</div>' +
@@ -106,15 +111,19 @@
 
     team.forEach(function (member, i) {
       var card = make('div', 'team-card reveal');
-      card.style.transitionDelay = (i * 80) + 'ms';
+      card.style.transitionDelay = (i * 70) + 'ms';
 
       var avatarInner = member.avatar
         ? '<img src="' + esc(member.avatar) + '" alt="' + esc(member.name) + '" />'
-        : '<span style="font-size:1.6rem;">👤</span>';
+        : '<span style="font-size:1.6rem;">&#128100;</span>';
+
+      var displayName = (member.name && member.name !== '-')
+        ? esc(member.name)
+        : '<span style="color:rgba(255,255,255,0.3);font-style:italic;">Kosong</span>';
 
       card.innerHTML =
         '<div class="team-avatar">' + avatarInner + '</div>' +
-        '<div class="team-name">' + esc(member.name) + '</div>' +
+        '<div class="team-name">' + displayName + '</div>' +
         '<div class="team-role">' + esc(member.role) + '</div>';
 
       grid.appendChild(card);
@@ -130,24 +139,9 @@
     grid.innerHTML = '';
 
     var items = [
-      {
-        icon: '👥',
-        value: stats.member,
-        label: 'Member',
-        type: 'number'
-      },
-      {
-        icon: '⭐',
-        value: stats.rating,
-        label: 'Rating',
-        type: 'number'
-      },
-      {
-        icon: '📱',
-        value: stats.platform,
-        label: 'Platform',
-        type: 'text'
-      }
+      { icon: '&#128101;', value: stats.member, label: 'Member', type: 'number' },
+      { icon: '&#11088;',  value: stats.rating,  label: 'Rating',  type: 'number' },
+      { icon: '&#128241;', value: stats.platform, label: 'Platform', type: 'text' }
     ];
 
     items.forEach(function (item, i) {
@@ -165,7 +159,7 @@
       }
 
       card.innerHTML =
-        '<span class="stat-icon">' + esc(item.icon) + '</span>' +
+        '<span class="stat-icon">' + item.icon + '</span>' +
         valueHtml +
         '<div class="stat-label">' + esc(item.label) + '</div>';
 
@@ -194,7 +188,7 @@
           '<div class="link-name">' + esc(link.name) + '</div>' +
           '<div class="link-url">' + esc(link.url) + '</div>' +
         '</div>' +
-        '<span class="link-arrow">→</span>';
+        '<span class="link-arrow">&rarr;</span>';
 
       grid.appendChild(card);
     });
@@ -205,50 +199,48 @@
      ============================================================ */
   function setDiscord(url) {
     var btn = el('discord-btn');
-    if (btn) btn.href = url || '#';
+    if (btn && url) btn.href = url;
   }
 
   /* ============================================================
-     RENDER ALL DARI CONFIG
+     RENDER SEMUA DARI CONFIG
      ============================================================ */
   function renderAll(cfg) {
-    renderWebsites(cfg.websites);
-    renderTeam(cfg.team);
-    renderStats(cfg.stats);
-    renderLinks(cfg.links);
-    setDiscord(cfg.discord);
+    initAds(cfg.ads || []);
+    renderWebsites(cfg.websites || []);
+    renderTeam(cfg.team || []);
+    renderStats(cfg.stats || {});
+    renderLinks(cfg.links || []);
+    setDiscord(cfg.discord || '#');
     initReveal();
   }
 
   /* ============================================================
-     LOAD config.json
+     LOAD config.json — satu-satunya sumber data
      ============================================================ */
   function loadConfig() {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', './config.json', true);
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          try {
-            var cfg = JSON.parse(xhr.responseText);
-            renderAll(cfg);
-          } catch (e) {
-            console.warn('[IOC] Gagal parse config.json, pakai default.');
-            renderAll(defaultConfig);
-          }
-        } else {
-          console.warn('[IOC] config.json tidak ditemukan, pakai default.');
-          renderAll(defaultConfig);
+      if (xhr.readyState !== 4) return;
+      if (xhr.status === 200) {
+        try {
+          var cfg = JSON.parse(xhr.responseText);
+          renderAll(cfg);
+        } catch (e) {
+          console.error('[IOC] Gagal parse config.json:', e);
         }
+      } else {
+        console.error('[IOC] config.json tidak ditemukan (status ' + xhr.status + ')');
       }
     };
     xhr.send();
   }
 
   /* ============================================================
-     SCROLL REVEAL — IntersectionObserver
-     Scroll bawah: fade in + slide up
-     Scroll atas: fade out + slide down (hidden class)
+     SCROLL REVEAL
+     Scroll bawah → fade in + slide up
+     Scroll atas  → fade out + slide down
      ============================================================ */
   var lastScrollY = window.pageYOffset || 0;
 
@@ -256,7 +248,6 @@
     var elements = document.querySelectorAll('.reveal');
 
     if (!('IntersectionObserver' in window)) {
-      // Fallback: tampilkan semua langsung
       for (var i = 0; i < elements.length; i++) {
         elements[i].classList.add('visible');
       }
@@ -270,18 +261,11 @@
 
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          // Masuk viewport — fade in + slide up
           entry.target.classList.remove('hidden');
           entry.target.classList.add('visible');
-        } else {
-          // Keluar viewport
-          if (scrollingDown) {
-            // Scroll bawah tapi elemen keluar atas — biarkan (udah visible)
-          } else {
-            // Scroll balik atas — fade out + slide down
-            entry.target.classList.remove('visible');
-            entry.target.classList.add('hidden');
-          }
+        } else if (!scrollingDown) {
+          entry.target.classList.remove('visible');
+          entry.target.classList.add('hidden');
         }
       });
     }, {
@@ -293,23 +277,19 @@
       observer.observe(elements[j]);
     }
 
-    // Update lastScrollY on scroll
     window.addEventListener('scroll', function () {
       lastScrollY = window.pageYOffset || 0;
     }, { passive: true });
   }
 
   /* ============================================================
-     BANNER PARALLAX SUBTLE
+     BANNER PARALLAX
      ============================================================ */
   function initParallax() {
     var bgImg = document.querySelector('.banner-bg-img');
     if (!bgImg) return;
-
     window.addEventListener('scroll', function () {
-      var scrollY = window.pageYOffset || 0;
-      var offset = scrollY * 0.35;
-      bgImg.style.transform = 'translateY(' + offset + 'px)';
+      bgImg.style.transform = 'translateY(' + ((window.pageYOffset || 0) * 0.35) + 'px)';
     }, { passive: true });
   }
 
