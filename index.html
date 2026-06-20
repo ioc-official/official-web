@@ -21,14 +21,6 @@
     <button class="ads-close" id="ads-close" aria-label="Tutup">✕</button>
   </div>
 
-  <!-- ===================== WC RIBBON ===================== -->
-  <div class="wc-ribbon" id="wc-ribbon">
-    <div class="wc-ribbon-inner">
-      <span class="wc-ribbon-text">⚽ FIFA World Cup 2026 sedang berlangsung! Final 19 Juli 2026 — New York/New Jersey 🏆</span>
-      <span class="wc-ribbon-text">⚽ FIFA World Cup 2026 sedang berlangsung! Final 19 Juli 2026 — New York/New Jersey 🏆</span>
-    </div>
-  </div>
-
   <!-- ===================== BANNER ===================== -->
   <section class="banner" id="banner">
     <div class="banner-bg">
@@ -36,8 +28,14 @@
       <div class="banner-gradient"></div>
       <div class="banner-wc-watermark">WC 2026</div>
     </div>
+
+    <!-- WC Logo pojok kiri atas banner -->
+    <div class="banner-wc-logo-wrap wc-only" id="wc-logo-wrap">
+      <img src="./assets/FIFAWC26Logo.png" alt="FIFA WC 2026" class="banner-wc-logo" />
+    </div>
+
     <div class="banner-content reveal">
-      <div class="banner-logo-wrap" id="banner-logo" title="Klik 3x untuk surprise!">
+      <div class="banner-logo-wrap">
         <img src="./assets/LogoIOC.png" alt="Logo IOC" class="banner-logo" />
       </div>
       <h1 class="banner-title">Indonesia Overfreight Community</h1>
@@ -46,11 +44,84 @@
         <span class="badge">🚆 Overfreight</span>
         <span class="badge">🇮🇩 Indonesia</span>
         <span class="badge">Since 11 Juni 2026</span>
-        <span class="badge wc-badge" id="wc-badge">🏆 WC 2026</span>
+        <span class="badge wc-badge wc-only" id="wc-badge">🏆 WC 2026 Edition</span>
       </div>
     </div>
+
     <div class="banner-scroll-hint">
       <span class="scroll-dot"></span>
+    </div>
+  </section>
+
+  <!-- ===================== WC HIGHLIGHT ===================== -->
+  <section class="section wc-section wc-only" id="wc-highlight">
+    <div class="container">
+      <div class="section-label reveal">Special Edition</div>
+      <h2 class="section-title reveal">FIFA World Cup 2026</h2>
+      <div class="wc-highlight-grid">
+        <!-- Trophy card -->
+        <div class="glass-card wc-trophy-card reveal">
+          <img src="./assets/TrophyWC26.png" alt="WC 2026 Trophy" class="wc-trophy-img" />
+          <div class="wc-trophy-info">
+            <div class="wc-trophy-title">FIFA World Cup 2026™</div>
+            <div class="wc-trophy-sub">Edisi ke-23 turnamen sepak bola paling bergengsi di dunia</div>
+          </div>
+        </div>
+        <!-- Info cards -->
+        <div class="wc-info-col">
+          <div class="glass-card wc-info-card reveal">
+            <div class="wc-info-icon">🏟️</div>
+            <div>
+              <div class="wc-info-label">Final</div>
+              <div class="wc-info-value">19 Juli 2026</div>
+              <div class="wc-info-sub">MetLife Stadium, New York/New Jersey</div>
+            </div>
+          </div>
+          <div class="glass-card wc-info-card reveal">
+            <div class="wc-info-icon">🌍</div>
+            <div>
+              <div class="wc-info-label">Tuan Rumah</div>
+              <div class="wc-info-value">USA · Mexico · Canada</div>
+              <div class="wc-info-sub">Pertama kali 3 negara jadi tuan rumah</div>
+            </div>
+          </div>
+          <div class="glass-card wc-info-card reveal">
+            <div class="wc-info-icon">⚽</div>
+            <div>
+              <div class="wc-info-label">Tim Peserta</div>
+              <div class="wc-info-value">48 Tim</div>
+              <div class="wc-info-sub">Format terbesar sepanjang sejarah WC</div>
+            </div>
+          </div>
+          <div class="glass-card wc-info-card reveal">
+            <div class="wc-info-icon">⏱️</div>
+            <div>
+              <div class="wc-info-label">Hitung Mundur ke Final</div>
+              <div class="wc-info-value wc-countdown" id="wc-countdown">--</div>
+              <div class="wc-info-sub">Live countdown</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stars of WC -->
+      <div class="wc-stars-section">
+        <div class="wc-stars-label reveal">⭐ Bintang Turnamen</div>
+        <div class="wc-stars-grid reveal">
+          <div class="wc-star-pill">🐐 Lionel Messi</div>
+          <div class="wc-star-pill">🔴 Cristiano Ronaldo</div>
+          <div class="wc-star-pill">⚡ Kylian Mbappé</div>
+          <div class="wc-star-pill">🔵 Erling Haaland</div>
+          <div class="wc-star-pill">🇧🇷 Neymar Jr.</div>
+          <div class="wc-star-pill">✨ Lamine Yamal</div>
+        </div>
+      </div>
+
+      <!-- 48 negara -->
+      <div class="wc-countries-section">
+        <div class="wc-stars-label reveal">🌐 48 Negara Peserta</div>
+        <div class="wc-countries-grid reveal" id="wc-countries-grid"></div>
+      </div>
     </div>
   </section>
 
@@ -69,31 +140,19 @@
           <div class="profil-meta">
             <div class="meta-item">
               <span class="meta-icon">📅</span>
-              <div>
-                <div class="meta-label">Berdiri</div>
-                <div class="meta-value">11 Juni 2026</div>
-              </div>
+              <div><div class="meta-label">Berdiri</div><div class="meta-value">11 Juni 2026</div></div>
             </div>
             <div class="meta-item">
               <span class="meta-icon">💬</span>
-              <div>
-                <div class="meta-label">Platform Utama</div>
-                <div class="meta-value">WhatsApp</div>
-              </div>
+              <div><div class="meta-label">Platform Utama</div><div class="meta-value">WhatsApp</div></div>
             </div>
             <div class="meta-item">
               <span class="meta-icon">🎮</span>
-              <div>
-                <div class="meta-label">Game</div>
-                <div class="meta-value">Overfreight (Roblox)</div>
-              </div>
+              <div><div class="meta-label">Game</div><div class="meta-value">Overfreight (Roblox)</div></div>
             </div>
             <div class="meta-item">
               <span class="meta-icon">🌍</span>
-              <div>
-                <div class="meta-label">Berbasis</div>
-                <div class="meta-value">Indonesia</div>
-              </div>
+              <div><div class="meta-label">Berbasis</div><div class="meta-value">Indonesia</div></div>
             </div>
           </div>
         </div>
@@ -168,65 +227,21 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-inner">
-        <div class="footer-logo">
-          <img src="./assets/LogoIOC.png" alt="IOC" class="footer-logo-img" />
-          <span>IOC</span>
+        <div class="footer-logo-row">
+          <div class="footer-logo">
+            <img src="./assets/LogoIOC.png" alt="IOC" class="footer-logo-img" />
+            <span>IOC</span>
+          </div>
+          <div class="footer-wc-logo wc-only" id="footer-wc-logo">
+            <img src="./assets/FIFAWC26Logo.png" alt="WC 2026" class="footer-wc-img" />
+          </div>
         </div>
         <p class="footer-text">© 2026 Indonesia Overfreight Community. Seluruh hak cipta dilindungi.</p>
-        <p class="footer-wc" id="footer-wc">🏆 IOC × FIFA World Cup 2026 Edition</p>
+        <p class="footer-wc wc-only" id="footer-wc">🏆 IOC × FIFA World Cup 2026 Edition</p>
         <p class="footer-disclaimer">IOC bukan komunitas resmi Overfreight. Murni komunitas fanbase Indonesia.</p>
       </div>
     </div>
   </footer>
-
-  <!-- ===================== FLOATING BALL ===================== -->
-  <button class="floating-ball" id="floating-ball" title="Klik untuk surprise! ⚽" aria-label="World Cup Easter Egg">⚽</button>
-
-  <!-- ===================== EASTER EGG OVERLAY ===================== -->
-  <div class="ee-overlay" id="ee-overlay">
-    <div class="ee-skip" id="ee-skip">Lewati ✕</div>
-    <div class="ee-youtube" id="ee-youtube"></div>
-    <div class="ee-confetti" id="ee-confetti"></div>
-
-    <div class="ee-stage" id="ee-stage-1">
-      <div class="ee-intro-text" id="ee-intro-text1">⚽ FIFA WORLD CUP</div>
-      <div class="ee-intro-year" id="ee-intro-year">2026</div>
-    </div>
-
-    <div class="ee-stage" id="ee-stage-2">
-      <div class="ee-countries-wrap">
-        <div class="ee-countries" id="ee-countries"></div>
-      </div>
-    </div>
-
-    <div class="ee-stage" id="ee-stage-3">
-      <div class="ee-host-label">🏠 TUAN RUMAH</div>
-      <div class="ee-hosts">
-        <div class="ee-host-item" id="ee-host-1">🇺🇸 USA</div>
-        <div class="ee-host-item" id="ee-host-2">🇲🇽 MEXICO</div>
-        <div class="ee-host-item" id="ee-host-3">🇨🇦 CANADA</div>
-      </div>
-    </div>
-
-    <div class="ee-stage" id="ee-stage-4">
-      <div class="ee-stars-label">⭐ THE STARS</div>
-      <div class="ee-stars" id="ee-stars"></div>
-    </div>
-
-    <div class="ee-stage" id="ee-stage-5">
-      <div class="ee-final-card">
-        <div class="ee-final-title">🏆 THE FINAL</div>
-        <div class="ee-final-detail">19 Juli 2026</div>
-        <div class="ee-final-detail">MetLife Stadium</div>
-        <div class="ee-final-detail">New York / New Jersey</div>
-        <div class="ee-final-teams">48 Tim • 3 Tuan Rumah • 1 Juara</div>
-      </div>
-    </div>
-
-    <div class="ee-stage" id="ee-stage-6">
-      <div class="ee-climax-text">SEE YOU AT THE FINAL 🏆</div>
-    </div>
-  </div>
 
   <script src="app.js"></script>
 </body>
