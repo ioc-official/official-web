@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Indonesia Overfreight Community</title>
+  <title>IOC 🏆 WC 2026</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -11,7 +11,7 @@
 </head>
 <body>
 
-  <!-- ===================== ADS BANNER ===================== -->
+  <!-- ===================== ADS BAR ===================== -->
   <div class="ads-bar" id="ads-bar">
     <div class="ads-bar-inner">
       <span class="ads-label">Info</span>
@@ -21,14 +21,23 @@
     <button class="ads-close" id="ads-close" aria-label="Tutup">✕</button>
   </div>
 
+  <!-- ===================== WC RIBBON ===================== -->
+  <div class="wc-ribbon" id="wc-ribbon">
+    <div class="wc-ribbon-inner">
+      <span class="wc-ribbon-text">⚽ FIFA World Cup 2026 sedang berlangsung! Final 19 Juli 2026 — New York/New Jersey 🏆</span>
+      <span class="wc-ribbon-text">⚽ FIFA World Cup 2026 sedang berlangsung! Final 19 Juli 2026 — New York/New Jersey 🏆</span>
+    </div>
+  </div>
+
   <!-- ===================== BANNER ===================== -->
   <section class="banner" id="banner">
     <div class="banner-bg">
       <img src="./assets/Background.png" alt="IOC Background" class="banner-bg-img" />
       <div class="banner-gradient"></div>
+      <div class="banner-wc-watermark">WC 2026</div>
     </div>
     <div class="banner-content reveal">
-      <div class="banner-logo-wrap">
+      <div class="banner-logo-wrap" id="banner-logo" title="Klik 3x untuk surprise!">
         <img src="./assets/LogoIOC.png" alt="Logo IOC" class="banner-logo" />
       </div>
       <h1 class="banner-title">Indonesia Overfreight Community</h1>
@@ -37,6 +46,7 @@
         <span class="badge">🚆 Overfreight</span>
         <span class="badge">🇮🇩 Indonesia</span>
         <span class="badge">Since 11 Juni 2026</span>
+        <span class="badge wc-badge" id="wc-badge">🏆 WC 2026</span>
       </div>
     </div>
     <div class="banner-scroll-hint">
@@ -163,10 +173,60 @@
           <span>IOC</span>
         </div>
         <p class="footer-text">© 2026 Indonesia Overfreight Community. Seluruh hak cipta dilindungi.</p>
+        <p class="footer-wc" id="footer-wc">🏆 IOC × FIFA World Cup 2026 Edition</p>
         <p class="footer-disclaimer">IOC bukan komunitas resmi Overfreight. Murni komunitas fanbase Indonesia.</p>
       </div>
     </div>
   </footer>
+
+  <!-- ===================== FLOATING BALL ===================== -->
+  <button class="floating-ball" id="floating-ball" title="Klik untuk surprise! ⚽" aria-label="World Cup Easter Egg">⚽</button>
+
+  <!-- ===================== EASTER EGG OVERLAY ===================== -->
+  <div class="ee-overlay" id="ee-overlay">
+    <div class="ee-skip" id="ee-skip">Lewati ✕</div>
+    <div class="ee-youtube" id="ee-youtube"></div>
+    <div class="ee-confetti" id="ee-confetti"></div>
+
+    <div class="ee-stage" id="ee-stage-1">
+      <div class="ee-intro-text" id="ee-intro-text1">⚽ FIFA WORLD CUP</div>
+      <div class="ee-intro-year" id="ee-intro-year">2026</div>
+    </div>
+
+    <div class="ee-stage" id="ee-stage-2">
+      <div class="ee-countries-wrap">
+        <div class="ee-countries" id="ee-countries"></div>
+      </div>
+    </div>
+
+    <div class="ee-stage" id="ee-stage-3">
+      <div class="ee-host-label">🏠 TUAN RUMAH</div>
+      <div class="ee-hosts">
+        <div class="ee-host-item" id="ee-host-1">🇺🇸 USA</div>
+        <div class="ee-host-item" id="ee-host-2">🇲🇽 MEXICO</div>
+        <div class="ee-host-item" id="ee-host-3">🇨🇦 CANADA</div>
+      </div>
+    </div>
+
+    <div class="ee-stage" id="ee-stage-4">
+      <div class="ee-stars-label">⭐ THE STARS</div>
+      <div class="ee-stars" id="ee-stars"></div>
+    </div>
+
+    <div class="ee-stage" id="ee-stage-5">
+      <div class="ee-final-card">
+        <div class="ee-final-title">🏆 THE FINAL</div>
+        <div class="ee-final-detail">19 Juli 2026</div>
+        <div class="ee-final-detail">MetLife Stadium</div>
+        <div class="ee-final-detail">New York / New Jersey</div>
+        <div class="ee-final-teams">48 Tim • 3 Tuan Rumah • 1 Juara</div>
+      </div>
+    </div>
+
+    <div class="ee-stage" id="ee-stage-6">
+      <div class="ee-climax-text">SEE YOU AT THE FINAL 🏆</div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
